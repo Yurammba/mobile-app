@@ -1,0 +1,284 @@
+:host {
+  display: block;
+  min-width: 375px;
+  width: 100%;
+}
+
+button {
+  display: flex !important;
+  align-self: center !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.top {
+  height: 44px;
+}
+
+.img-top {
+  width: 100%;
+  max-height: 44px;
+}
+
+.top-label {
+  height: 44px;
+}
+
+.footer {
+  height: 83px;
+  margin-top: auto;
+}
+
+.img {
+  max-height: 83px;
+  width: 100%;
+}
+
+.mat-toolbar {
+  background-color: white;
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
+
+  span {
+    padding: 0 20px;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* Занимает доступное пространство, чтобы выровнять по вертикали */
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: none;
+  border: none;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 60px;
+}
+
+.card-content {
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: 18px;
+  font-style: normal;
+}
+
+.address {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px
+}
+
+//button
+.button-with-icon {
+  width: 335px;
+  height: 52px;
+  border-radius: 12px;
+  background: #F8F8FC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.container-label {
+  display: flex;
+  align-items: center;
+
+  span {
+    padding-top: 2px;
+    padding-left: 12px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
+
+.icon-app {
+  display: flex;
+  align-content: center;
+}
+
+.btn-icon-app {
+  color: #1AA6D7;
+}
+
+.icon-row {
+  display: flex;
+  align-content: center;
+  padding-left: 136px;
+}
+
+.btn-icon-row {
+  color: rgba(0, 0, 0, .54);
+}
+
+//select
+mat-form-field {
+  width: 100%;
+}
+
+[_nghost-form-container] {
+  height: 52px;
+  width: 335px;
+  margin: 17px auto 23px;
+}
+
+//data
+.container-data-time {
+  width: 335px;
+  height: 124px;
+  margin: 0 auto;
+}
+
+
+.label-data-time {
+  color: #33333366;
+  font-size: 12px;
+}
+
+.container-data {
+  padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.checkbox-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 4px;
+  cursor: pointer;
+  width: 65px;
+  height: 50px;
+  border-radius: 6px;
+  flex-direction: column;
+  transition: background-color 0.3s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.custom-checkbox {
+  display: none; /* Скрываем стандартный чекбокс */
+}
+
+.label-day-data {
+  width: 65px;
+  height: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.label-day-data-checked {
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px 0 #00000014;
+}
+
+.label-day {
+  color: #33333366;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.label-data {
+  color: #333333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.day-checked {
+  color: #248ED066;
+}
+
+.data-checked {
+  color: #1AA6D7;
+}
+
+//time
+.container-time {
+  padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.li-time {
+  display: flex;
+  justify-content: center;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.checkbox-btn-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 55px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1.6px solid #EEE;
+  transition: background-color 0.3s;
+}
+
+.custom-checkbox-time {
+  display: none;
+}
+
+.custom-checkbox-time:checked + .label-time {
+  color: rgba(51, 51, 51, 0.40);
+}
+
+.label-time {
+  cursor: pointer;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+}
+
+.btn-next {
+  width: 333px;
+  height: 57px;
+  border-radius: 16px;
+  margin: 10px auto 22px;
+}

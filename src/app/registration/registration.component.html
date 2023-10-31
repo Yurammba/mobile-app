@@ -1,0 +1,30 @@
+<div class="mobile">
+  <div class="top">
+    <img class="img-top" src="assets/Status%20Bar.svg">
+  </div>
+  <div class="top-label">
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" (click)="back()">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <span>Онлайн запись</span>
+      <span></span>
+    </mat-toolbar>
+  </div>
+
+  <div class="window">
+    <mat-form-field appearance="outline">
+      <mat-label class="name">Ваше имя</mat-label>
+      <input placeholder="Ваше имя" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label class="number">Номер телефона</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </div>
+
+  <button mat-raised-button class="btn-next" color="primary" *ngIf="true" (click)="next()">Продолжить</button>
+  <div class="footer">
+    <img class="img" src="assets/TabBar.svg">
+  </div>
+</div>

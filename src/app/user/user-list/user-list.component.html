@@ -1,0 +1,77 @@
+<div class="mobile">
+  <div class="top">
+    <img class="img-top" src="assets/Status%20Bar.svg">
+  </div>
+  <div class="top-label">
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <span>Онлайн запись</span>
+      <span></span>
+    </mat-toolbar>
+  </div>
+  <div class="window">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title-group>
+          <img class="avatar" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content class="card-content">
+        <mat-card-title class="name">Сюзанна Бабицкая</mat-card-title>
+        <mat-card-subtitle class="address">ул. Урванцева, 12, Красноярск</mat-card-subtitle>
+      </mat-card-content>
+    </mat-card>
+
+    <button mat-stroked-button class="button-with-icon">
+      <div class="container-label">
+        <div class="icon-app">
+          <mat-icon class="btn-icon-app">border_all</mat-icon>
+        </div>
+        <span class="button-text">Направление</span>
+        <div class="icon-row">
+          <mat-icon class="btn-icon-row">keyboard_arrow_right</mat-icon>
+        </div>
+      </div>
+    </button>
+
+    <div _nghost-form-container>
+      <mat-form-field appearance="outline">
+        <mat-label>Выберите услугу</mat-label>
+        <mat-select>
+          <mat-option value="option1">Брови</mat-option>
+          <mat-option value="option2">Ногти</mat-option>
+          <mat-option value="option3">Брови + Ногти</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="container-data-time">
+      <label class="label-data-time">ДАТА И ВРЕМЯ</label>
+      <ul class="container-data">
+        <li *ngFor="let item of isChecked; let i = index" class="checkbox-btn" (click)="toggleCheckbox(i)">
+          <mat-checkbox [(ngModel)]="item.checked" class="custom-checkbox"></mat-checkbox>
+          <div class="label-day-data" [ngClass]="{'label-day-data-checked': item.checked }">
+            <label class="label-day" [ngClass]="{'day-checked': item.checked }">{{ item.day }}</label>
+            <label class="label-data" [ngClass]="{'data-checked': item.checked}">{{ item.date }}</label>
+          </div>
+        </li>
+      </ul>
+      <ul class="container-time">
+        <li *ngFor="let item of timeArray; let i = index" class="li-time" (click)="toggleCheckboxTime(i)" >
+          <div class="checkbox-btn-time">
+            <input type="checkbox" class="custom-checkbox-time" [id]="'myCheckbox' + i" [(ngModel)]="item.checked"
+                   [disabled]="item.disabled">
+            <label class="label-time" [for]="'myCheckbox' + i">{{ item.value }}</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <button mat-raised-button class="btn-next" color="primary" *ngIf="true" (click)="next()">Продолжить</button>
+  <div class="footer">
+    <img class="img" src="assets/TabBar.svg">
+  </div>
+</div>

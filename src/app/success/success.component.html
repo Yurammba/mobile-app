@@ -1,0 +1,31 @@
+<div class="mobile">
+  <div class="top">
+    <img class="img-top" src="assets/Status%20Bar.svg">
+  </div>
+  <div class="top-label">
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon">
+        <mat-icon *ngIf="false">arrow_back_ios</mat-icon>
+      </button>
+      <span>Онлайн запись</span>
+      <span></span>
+    </mat-toolbar>
+  </div>
+  <div class="container">
+    <div class="success">
+      <mat-icon class="check">check</mat-icon>
+    </div>
+    <label>Вы успешно записались к мастеру!</label>
+  </div>
+  <button mat-fab class="btn-back" (click)="back()" matRipple
+          [matRippleCentered]="centered"
+          [matRippleRadius]="radius"
+
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+
+  <div class="footer">
+    <img class="img" src="assets/TabBar.svg">
+  </div>
+</div>
