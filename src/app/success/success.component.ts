@@ -15,10 +15,12 @@ import { Router } from '@angular/router';
 
 export class SuccessComponent {
   centered = true;
-  radius: number = 300;
+  radius: number = 250;
+    constructor(private router: Router) {}
 
-  constructor(private router: Router) {}
   back() {
+
     this.router.navigate(['users']);
   }
+
 }
