@@ -52,9 +52,9 @@
       <ul class="container-data">
         <li *ngFor="let item of isChecked; let i = index" class="checkbox-btn" (click)="toggleCheckbox(i)">
           <mat-checkbox [(ngModel)]="item.checked" class="custom-checkbox"></mat-checkbox>
-          <div class="label-day-data" [ngClass]="{'label-day-data-checked': item.checked }">
-            <label class="label-day" [ngClass]="{'day-checked': item.checked }">{{ item.day }}</label>
-            <label class="label-data" [ngClass]="{'data-checked': item.checked}">{{ item.date }}</label>
+          <div class="label-day-data" [class.label-day-data-checked]="item.checked">
+            <label class="label-day" [class.day-checked]="item.checked">{{ item.day }}</label>
+            <label class="label-data" [class.data-checked]="item.checked">{{ item.date }}</label>
           </div>
         </li>
       </ul>
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <button mat-raised-button class="btn-next" color="primary" *ngIf="true" (click)="next()">Продолжить</button>
+  <button mat-raised-button class="btn-next" color="primary" (click)="next()">Продолжить</button>
   <div class="footer">
   </div>
 </div>

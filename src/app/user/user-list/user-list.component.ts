@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss'],
 })
-export class UserListComponent implements OnInit {
+export class UserListComponent {
   isChecked: { day: string, date: string, checked: boolean }[] = [
     {day: 'Пн', date: '6 сент.', checked: false},
     {day: 'Вт', date: '7 сент.', checked: false},
@@ -30,34 +30,22 @@ export class UserListComponent implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
-
-  }
-
   next() {
     this.router.navigate(['registration']);
   }
 
   toggleCheckbox(index: number) {
-    this.isChecked.forEach((item, i) => {
-      if (i !== index) {
-        item.checked = false;
-      }
-    });
-    // Затем переключаем состояние выбранного элемента
-    this.isChecked[index].checked = !this.isChecked[index].checked;
+    this.updateCheckboxes(this.isChecked, index);
     this.enableAllTimeArrayItems();
   }
 
   toggleCheckboxTime(index: number) {
-    this.timeArray.forEach((item, i) => {
-      if (i !== index) {
-        item.checked = false;
-      }
-    });
-    // Затем переключаем состояние выбранного элемента
-    this.timeArray[index].checked = !this.timeArray[index].checked;
+    this.updateCheckboxes(this.timeArray, index);
     this.enableAllTimeArrayItems();
+  }
+
+  private updateCheckboxes(checkboxes: { checked: boolean }[], index: number) {
+    checkboxes.forEach((item, i) => item.checked = i == index);
   }
 
   enableAllTimeArrayItems() {
